@@ -14,8 +14,17 @@ This GrapesJS plugin allows you to add a customizable weather widget block to yo
 - Weather Display: Integrates an iframe from Yr.no that displays live weather data.
 - Custom UI: The plugin provides a custom popup for selecting the location.
 
-##How It Looks:
-
+## How It Looks:
+### 1.
+![image](https://github.com/user-attachments/assets/01d2f2a7-6e71-47ae-ae12-51b0c7c51ac9)
+### 2.
+![image](https://github.com/user-attachments/assets/491df98b-e582-43c4-b318-ddfb9695db52)
+### 3.
+![image](https://github.com/user-attachments/assets/e7c24bfc-136d-46ae-858e-8136df176255)
+### 4.
+![image](https://github.com/user-attachments/assets/5bf26707-c7d3-4ffb-9973-808ac589e766)
+### 5.
+![image](https://github.com/user-attachments/assets/d7823d74-dc5e-4051-8d0a-bc8a655428b8)
 
 ## Limitations
 - This plugin currently supports only Norwegian locations.
