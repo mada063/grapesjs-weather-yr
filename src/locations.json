@@ -1,0 +1,62 @@
+{
+    "fylker": {
+      "Agder": ["Kristiansand", "Grimstad"],
+      "Telemark": ["Skien"],
+      "Østfold": ["Fredrikstad"],
+      "Innlandet": ["Hamar", "Gjøvik"],
+      "Vestland": ["Bergen", "Voss", "Florø", "Stord", "Odda", "Norheimsund", "Dale", "Knarvik", "Osterøy"],
+      "Trøndelag": ["Trondheim"],
+      "Møre og Romsdal": ["Kristiansund", "Ålesund"],
+      "Troms": ["Harstad", "Tromsø"],
+      "Finnmark": ["Karasjok", "Kautokeino", "Alta"],
+      "Nordland": ["Mo", "Bodø", "Narvik"],
+      "Rogaland": ["Sandnes", "Stavanger", "Haugesund"],
+      "Oslo": ["Oslo"],
+      "Buskerud": ["Kongsberg"]
+    },
+    "locations": {
+      "Kristiansand": [{ "value": "1-2376", "name": "Kristiansand" }],
+      "Grimstad": [{ "value": "1-7667", "name": "Grimstad" }],
+      "Skien": [{ "value": "1-30795", "name": "Skien" }],
+      "Fredrikstad": [{ "value": "1-33600", "name": "Fredrikstad" }],
+      "Hamar": [{ "value": "1-131071", "name": "Hamar" }],
+      "Gjøvik": [{ "value": "1-130075", "name": "Gjøvik" }],
+      "Bergen": [
+        { "value": "1-92416", "name": "Bergen" },
+        { "value": "1-92396", "name": "Arna" },
+        { "value": "2-3163250", "name": "Alvøen" },
+        { "value": "1-2470771", "name": "Fana" },
+        { "value": "2-6951026", "name": "Kokstad" }
+      ],
+      "Voss": [{ "value": "1-109644", "name": "Vossavangen" }],
+      "Florø": [{ "value": "1-158557", "name": "Florø" }],
+      "Stord": [{ "value": "1-64804", "name": "Leirvik" }],
+      "Trondheim": [{ "value": "1-211102", "name": "Trondheim" }],
+      "Kristiansund": [{ "value": "1-201405", "name": "Kristiansund" }],
+      "Ålesund": [{ "value": "1-181828", "name": "Ålesund" }],
+      "Harstad": [{ "value": "1-294022", "name": "Harstad" }],
+      "Tromsø": [{ "value": "1-305409", "name": "Tromsø" }],
+      "Karasjok": [{ "value": "1-303806", "name": "Karasjok" }],
+      "Kautokeino": [{ "value": "1-298383", "name": "Kautokeino" }],
+      "Alta": [{ "value": "1-312957", "name": "Alta" }],
+      "Mo": [{ "value": "10-1072689", "name": "Mo" }],
+      "Bodø": [{ "value": "1-269359", "name": "Bodø" }],
+      "Narvik": [{ "value": "1-283156", "name": "Narvik" }],
+      "Sandnes": [{ "value": "1-15452", "name": "Sandnes" }],
+      "Stavanger": [{ "value": "1-15183", "name": "Stavanger" }],
+      "Haugesund": [{ "value": "1-36072", "name": "Haugesund" }],
+      "Oslo": [{ "value": "1-72837", "name": "Oslo" }],
+      "Kongsberg": [{ "value": "1-58196", "name": "Kongsberg" }],
+      "Odda": [{ "value": "1-80215", "name": "Odda" }],
+      "Norheimsund": [{ "value": "1-94425", "name": "Norheimsund" }],
+      "Dale": [{ "value": "1-107882", "name": "Dale" }],
+      "Knarvik": [{ "value": "1-107040", "name": "Knarvik" }],
+      "Osterøy": [
+        { "value": "1-93192", "name": "Haus" },
+        { "value": "1-93129", "name": "Votlo" },
+        { "value": "1-107888", "name": "Hosanger" },
+        { "value": "1-108118", "name": "Lonevåg" }
+      ]
+    }
+  }
+  

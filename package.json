@@ -1,0 +1,26 @@
+{
+  "name": "grapesjs-yr",
+  "version": "1.0.1",
+  "description": "Grapesjs Yr",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/grapesjs-yr.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^4.1.3"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lit-html": "^3.2.1"
+  }
+}
