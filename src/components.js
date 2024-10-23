@@ -44,8 +44,8 @@ export default (editor = {}) => {
           overlay.style.width = '100vw';
           overlay.style.height = '100vh';
           overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Semi-transparent dark background
-          overlay.style.zIndex = '999'; // Lower than the popup
-          document.body.appendChild(overlay);
+          overlay.style.zIndex = '100'; // Lower than the popup
+          
 
           // Popup container with updated styling
           const popupMenu = document.createElement('div');
@@ -57,11 +57,11 @@ export default (editor = {}) => {
           popupMenu.style.left = '50%';
           popupMenu.style.minWidth = '30vw'
           popupMenu.style.transform = 'translate(-50%, -50%)';
-          popupMenu.style.backgroundColor = 'var(--custom-color-800)'; // New background color
+          popupMenu.style.backgroundColor = 'var(--gjs-primary-color)'; // New background color
           popupMenu.style.color = 'white'; // Text color
           popupMenu.style.margin = '1rem';
           popupMenu.style.borderRadius = '0.2rem'; // Rounded corners
-          popupMenu.style.zIndex = '1000';
+          popupMenu.style.zIndex = '999';
           popupMenu.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; // Smooth fade and slide down
           popupMenu.style.opacity = '0';
           popupMenu.style.visibility = 'hidden';
@@ -214,7 +214,7 @@ export default (editor = {}) => {
           saveButton.value = 'Lagre';
           saveButton.style.fontSize = '100%'
           saveButton.style.lineHeight = 'inherit'
-          saveButton.style.backgroundColor = 'var(--custom-color-500)';
+          saveButton.style.backgroundColor = 'rgba(0,0,0,.15)';
           saveButton.style.fontSize = '16px !important';
           saveButton.style.color = 'white';
           saveButton.style.border = 'none';
@@ -226,10 +226,10 @@ export default (editor = {}) => {
           saveButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
   
           saveButton.addEventListener('mouseover', () => {
-            saveButton.style.backgroundColor = 'var(--custom-color-400)';
+            saveButton.style.backgroundColor = 'var(--gjs-quaternary-color)';
           });
           saveButton.addEventListener('mouseout', () => {
-            saveButton.style.backgroundColor = 'var(--custom-color-500)';
+            saveButton.style.backgroundColor = 'rgba(0,0,0,.15)';
           });
   
           const cancelButton = document.createElement('input');
@@ -238,7 +238,7 @@ export default (editor = {}) => {
           cancelButton.className = 'w-button'
           cancelButton.style.fontSize = '100%'
           cancelButton.style.lineHeight = 'inherit'
-          cancelButton.style.backgroundColor = 'var(--custom-color-400)';
+          cancelButton.style.backgroundColor = 'rgba(0,0,0,.15)';
           cancelButton.style.color = 'white';
           cancelButton.style.border = 'none';
           cancelButton.style.padding = '0.5rem';
@@ -248,14 +248,17 @@ export default (editor = {}) => {
           cancelButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
   
           cancelButton.addEventListener('mouseover', () => {
-            cancelButton.style.backgroundColor = 'var(--custom-color-400)';
+            cancelButton.style.backgroundColor = 'var(--gjs-quaternary-color)';
           });
           cancelButton.addEventListener('mouseout', () => {
-            cancelButton.style.backgroundColor = 'var(--custom-color-500)';
+            cancelButton.style.backgroundColor = 'rgba(0,0,0,.15)';
           });
 
           buttonContainer.appendChild(saveButton);
           buttonContainer.appendChild(cancelButton);
+
+          document.body.appendChild(overlay);
+          document.body.appendChild(popupMenu);
   
           // Append dropdowns and buttons to the popup menu
           popupMenu.appendChild(darkLine)
@@ -267,7 +270,8 @@ export default (editor = {}) => {
           popupMenu.appendChild(stedSelect);
           popupMenu.appendChild(whiteLine);
           popupMenu.appendChild(buttonContainer); // Add button container instead of appending buttons directly
-          document.body.appendChild(popupMenu);
+          
+          
   
           // Show the popup when the block is clicked
           this.el.addEventListener('click', () => {
