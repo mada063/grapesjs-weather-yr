@@ -1,145 +1,98 @@
-# Grapesjs Yr
+# GrapesJS Weather Plugin
+This plugin adds a weather block to the GrapesJS editor. It's part of a larger project to enhance web-building functionality with easy-to-use, customizable components. The weather plugin enables users to display weather information for selected locations using a dynamic iframe from Yr.no.
 
-[DEMO](##)
-> **Provide a live demo of your plugin**
-For a better user engagement create a simple live demo by using services like [JSFiddle](https://jsfiddle.net) [CodeSandbox](https://codesandbox.io) [CodePen](https://codepen.io) and link it here in your README (attaching a screenshot/gif will also be a plus).
-To help you in this process here below you will find the necessary HTML/CSS/JS, so it just a matter of copy-pasting on some of those services. After that delete this part and update the link above
+## About This Plugin
+This GrapesJS plugin allows you to add a customizable weather widget block to your web pages. You can select different locations, and the weather information is fetched dynamically from Yr.no.
 
-### HTML
-```html
-<link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
-<script src="https://unpkg.com/grapesjs"></script>
-<script src="https://unpkg.com/grapesjs-yr"></script>
+## Features
+- Customizable weather block.
+- Locations can be chosen dynamically from a list of Norwegian cities and towns.
+- Uses Yr.no’s weather iframe to fetch and display live weather data.
+- Fully integrated into the GrapesJS editor interface.
+- Easy-to-use UI for selecting locations.
+- Location Management: Select a location (Fylke, By, Sted) from a list of predefined options.
+- Weather Display: Integrates an iframe from Yr.no that displays live weather data.
+- Custom UI: The plugin provides a custom popup for selecting the location.
 
-<div id="gjs"></div>
+##How It Looks:
+
+
+## Limitations
+- This plugin currently supports only Norwegian locations.
+- Locations are preconfigured, and the weather iframe data is fetched from Yr.no based on predefined IDs.
+
+## How to Use the Plugin
+### Install
+You can install this plugin by cloning the repository from GitHub.
+
 ```
-
-### JS
-```js
-const editor = grapesjs.init({
-	container: '#gjs',
-  height: '100%',
-  fromElement: true,
-  storageManager: false,
-  plugins: ['grapesjs-yr'],
-});
+git clone https://github.com/your-username/grapesjs-weather-plugin.git
 ```
-
-### CSS
-```css
-body, html {
-  margin: 0;
-  height: 100%;
-}
-```
-
-
-## Summary
-
-* Plugin name: `grapesjs-yr`
-* Components
-    * `component-id-1`
-    * `component-id-2`
-    * ...
-* Blocks
-    * `block-id-1`
-    * `block-id-2`
-    * ...
-
-
-
-## Options
-
-| Option | Description | Default |
-|-|-|-
-| `option1` | Description option | `default value` |
-
-
-
-## Download
-
-* CDN
-  * `https://unpkg.com/grapesjs-yr`
-* NPM
-  * `npm i grapesjs-yr`
-* GIT
-  * `git clone https://github.com/YOUR-USERNAME/grapesjs-yr.git`
-
-
 
 ## Usage
+### Include the Plugin in GrapesJS:
+You can include this plugin by importing it if you're using a modern JavaScript setup.
 
-Directly in the browser
-```html
-<link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
-<script src="https://unpkg.com/grapesjs"></script>
-<script src="path/to/grapesjs-yr.min.js"></script>
-
-<div id="gjs"></div>
-
-<script type="text/javascript">
-  var editor = grapesjs.init({
-      container: '#gjs',
-      // ...
-      plugins: ['grapesjs-yr'],
-      pluginsOpts: {
-        'grapesjs-yr': { /* options */ }
-      }
-  });
-</script>
+Modern JavaScript
 ```
-
-Modern javascript
-```js
 import grapesjs from 'grapesjs';
-import plugin from 'grapesjs-yr';
+import weatherPlugin from 'grapesjs-weather-plugin';
 import 'grapesjs/dist/css/grapes.min.css';
 
 const editor = grapesjs.init({
-  container : '#gjs',
-  // ...
-  plugins: [plugin],
-  pluginsOpts: {
-    [plugin]: { /* options */ }
-  }
-  // or
-  plugins: [
-    editor => plugin(editor, { /* options */ }),
-  ],
+  container: '#gjs',
+  plugins: [weatherPlugin],
 });
 ```
 
-
+### Weather Block Usage
+- Add the Block: Once the plugin is installed, you can drag the weather block into your page from the GrapesJS block manager.
+- Customize the Location: Click the block, and a popup will appear where you can select the location (Fylke, By, Sted).
+- Save and Publish: The iframe will update with the weather information for the selected location.
 
 ## Development
+To contribute or modify the plugin, follow these steps:
 
-Clone the repository
-
-```sh
-$ git clone https://github.com/YOUR-USERNAME/grapesjs-yr.git
-$ cd grapesjs-yr
+###Clone the Repository
+```
+git clone https://github.com/your-username/grapesjs-weather-plugin.git
+cd grapesjs-weather-plugin
+```
+###Install Dependencies
+```
+npm install
 ```
 
-Install dependencies
+###Start the Dev Server
+```
+npm start
+```
+This will start a local development server, and changes will be reflected immediately.
 
-```sh
-$ npm i
+### Build the Plugin
+```
+npm run build
+```
+This will create the production build of the plugin in the dist folder.
+
+## Options
+The plugin can be customized by providing options when initializing it with GrapesJS.
+
+```
+const editor = grapesjs.init({
+  container: '#gjs',
+  plugins: ['grapesjs-weather-plugin'],
+  pluginsOpts: {
+    'grapesjs-weather-plugin': {
+      // Add any custom options here
+    }
+  }
+});
 ```
 
-Start the dev server
+## Motivations
+This plugin was developed to fill a need for dynamically displaying weather information in GrapesJS-based websites. By leveraging Yr.no’s weather service, this plugin provides a convenient solution for developers who need to display live weather data.
 
-```sh
-$ npm start
-```
+## Download
+You can download this plugin from:
 
-Build the source
-
-```sh
-$ npm run build
-```
-
-
-
-## License
-
-MIT
